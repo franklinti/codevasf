@@ -1,0 +1,90 @@
+@CHARSET "ISO-8859-1";
+@import url(font-awesome.min.css);
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
+
+#flip-container {
+  position: relative;
+  margin: 10px auto;
+  width: 70%;
+  height: 700px;
+  z-index: 1;
+  perspective: 600px;
+  
+}
+#flip-card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s linear;
+  box-shadow: 5px 5px 5px #aaa;
+}
+#flip-container.flipped #flip-card {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  padding:10px;
+  background-color: transparent;
+}
+.back{
+  padding:10px;
+  background-color:white;
+}
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+}
+.entry-group > .form-control:not(:first-child):not(:last-child),
+.entry-group > .btn:not(:first-child):not(:last-child){
+  border-radius: 0;
+  margin: 3px 0;
+}
+.entry-group > .form-control:first-child:not(:last-child),
+.entry-group > .btn:first-child:not(:last-child) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 3px;
+}
+.entry-group > .form-control:last-child:not(:first-child),
+.entry-group > .btn:not(:first-child) {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: 3px;
+}
+table {
+  border-spacing: 0;
+  width: 40%;
+}
+
+th, td {
+  text-align: left;
+}
+.btn {
+  border: none;
+  padding: 5px 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: orange;
+}
+.containerframe{
+  position: relative;
+  overflow: hidden;
+  width: 56%;
+  padding-top: 56%;
+   
+}
+.frame{
+  width: 100%;
+  height: 426%;
+  border: 0;
+  frameborder:0;
+}
